@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PoohWisdom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pooh" translatesAutoresizingMaskIntoConstraints="NO" id="3oN-Wl-QXy">
+                                <rect key="frame" x="66" y="323.5" width="243" height="323.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3oN-Wl-QXy" secondAttribute="height" multiplier="3:4" id="I03-j6-iMP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nM-RB-8vB">
+                                <rect key="frame" x="20" y="40" width="335" height="263.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-n0-09G">
+                                <rect key="frame" x="16" y="328.5" width="94" height="30"/>
+                                <state key="normal" title="Subscriptions"/>
+                                <connections>
+                                    <action selector="purchaseSubscription:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ptW-dr-aAW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-RP-nt5">
+                                <rect key="frame" x="306" y="328.5" width="53" height="30"/>
+                                <state key="normal" title="Restore"/>
+                                <connections>
+                                    <action selector="purchaseSubscription:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omE-na-suK"/>
+                                    <action selector="restorePurchases:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDt-To-skV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3oN-Wl-QXy" firstAttribute="top" secondItem="3nM-RB-8vB" secondAttribute="bottom" constant="20" id="16z-un-cZa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3oN-Wl-QXy" secondAttribute="bottom" constant="20" id="1pY-3f-LGj"/>
+                            <constraint firstItem="M0G-n0-09G" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5T8-xT-rzr"/>
+                            <constraint firstItem="3oN-Wl-QXy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="902-GM-oyc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZz-RP-nt5" secondAttribute="trailing" constant="16" id="LS3-c1-s23"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M0G-n0-09G" secondAttribute="trailing" symbolic="YES" id="MQv-Em-94M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3nM-RB-8vB" secondAttribute="trailing" constant="20" id="UZj-UT-FL8"/>
+                            <constraint firstItem="3nM-RB-8vB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cHr-yb-Yvk"/>
+                            <constraint firstItem="aZz-RP-nt5" firstAttribute="centerY" secondItem="M0G-n0-09G" secondAttribute="centerY" id="gdL-G6-KKZ"/>
+                            <constraint firstItem="aZz-RP-nt5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M0G-n0-09G" secondAttribute="trailing" constant="8" symbolic="YES" id="gh9-z9-tGI"/>
+                            <constraint firstItem="M0G-n0-09G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kdS-sf-rFN"/>
+                            <constraint firstItem="3nM-RB-8vB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ov8-Y9-gGL"/>
+                            <constraint firstItem="3oN-Wl-QXy" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="piF-TZ-mdf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="purchaseBttn" destination="M0G-n0-09G" id="RFJ-Ai-rfZ"/>
+                        <outlet property="quoteLbl" destination="3nM-RB-8vB" id="srh-0x-imX"/>
+                        <outlet property="restoreBttn" destination="aZz-RP-nt5" id="YhH-p6-xYk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pooh" width="750" height="1000"/>
+    </resources>
+</document>
